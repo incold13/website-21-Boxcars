@@ -1,0 +1,46 @@
+services:
+  # 1. Контейнер базы данных PostgreSQL
+  postgres:
+    image: postgres:16-alpine
+    container_name: boxcars_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: boxcars_db
+    ports:
+      - "5432:5432"
+    volumes:
+      # Постоянное хранилище базы
+      - postgres_data:/var/lib/postgresql/data
+      # Автоматическая инициализация и заливка 12 машин при первом старте
+      - ./server/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d boxcars_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # 2. Контейнер API-сервера (Node.js + Express)
+  api:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: boxcars_api
+    restart: unless-stopped
+    environment:
+      PORT: 5001
+      PGHOST: postgres
+      PGPORT: 5432
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      PGDATABASE: boxcars_db
+    ports:
+      - "5001:5001"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
+    name: boxcars_postgres_data

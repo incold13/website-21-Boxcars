@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  background: transparent;
+}
+
+.sect5 {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "DM Sans", sans-serif;
+  background-color: #ffffff;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3vw;
+    flex-shrink: 0;
+  }
+
+  .sect5_all {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .sect5_card {
+      width: 43.8vw;
+      height: 20vw;
+      border-radius: 1.1vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.sect5_card_blue {
+        background-color: #E9F2FF;
+      }
+
+      &.sect5_card_pink {
+        background-color: #FFE9F3;
+      }
+
+      .sect5_card_all {
+        width: 84%;
+        height: 78%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .sect5_card_left {
+          width: 65%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 1.2vw;
+
+          .sect5_card_title {
+            font-size: 2.2vw;
+            font-weight: 600;
+            color: #050B20;
+            line-height: 1.25;
+          }
+
+          .sect5_card_desc {
+            font-size: 0.95vw;
+            font-weight: 400;
+            color: #050B20;
+            line-height: 1.5;
+          }
+
+          .sect5_card_btn {
+            width: 10.5vw;
+            height: 3.4vw;
+            border-radius: 0.8vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6vw;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+
+            &:hover {
+              opacity: 0.9;
+              transform: translateY(-0.15vw);
+            }
+
+            &.sect5_card_btn_blue {
+              background-color: #405FF2;
+            }
+
+            &.sect5_card_btn_black {
+              background-color: #050B20;
+            }
+
+            .sect5_card_btn_text {
+              font-size: 0.95vw;
+              font-weight: 500;
+              color: #ffffff;
+            }
+
+            .sect5_card_btn_arrow {
+              width: 0.8vw;
+              height: 0.8vw;
+              object-fit: contain;
+            }
+          }
+        }
+
+        .sect5_card_right {
+          width: 30%;
+          height: 40vh;
+          display: flex;
+          justify-content: center;
+          align-items: end;
+
+          .sect5_card_ill {
+            width: 7.5vw;
+            height: 7.5vw;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .sect5 {
+    height: auto;
+
+    &::before,
+    &::after {
+      height: 5vw;
+    }
+
+    .sect5_all {
+      gap: 2.5vw;
+
+      .sect5_card {
+        width: 43.5vw;
+        height: auto;
+        min-height: 28vw;
+        border-radius: 1.5vw;
+
+        .sect5_card_all {
+          height: auto;
+
+          .sect5_card_left {
+            gap: 1.8vw;
+
+            .sect5_card_title {
+              font-size: 2.6vw;
+            }
+
+            .sect5_card_desc {
+              font-size: 1.4vw;
+            }
+
+            .sect5_card_btn {
+              width: 16vw;
+              height: 4.8vw;
+              border-radius: 1.2vw;
+              gap: 0.8vw;
+
+              .sect5_card_btn_text {
+                font-size: 1.4vw;
+              }
+
+              .sect5_card_btn_arrow {
+                width: 1.2vw;
+                height: 1.2vw;
+              }
+            }
+          }
+
+          .sect5_card_right {
+            height: auto;
+
+            .sect5_card_ill {
+              width: 10vw;
+              height: 10vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sect5 {
+    height: auto;
+
+    &::before,
+    &::after {
+      height: 8vw;
+    }
+
+    .sect5_all {
+      flex-direction: column;
+      gap: 4vw;
+
+      .sect5_card {
+        width: 100%;
+        height: auto;
+        min-height: 48vw;
+        border-radius: 3vw;
+
+        .sect5_card_all {
+          width: 88%;
+          height: auto;
+          gap: 2vw;
+
+          .sect5_card_left {
+            width: 68%;
+            gap: 2.5vw;
+
+            .sect5_card_title {
+              font-size: 5.2vw;
+            }
+
+            .sect5_card_desc {
+              font-size: 3.2vw;
+            }
+
+            .sect5_card_btn {
+              width: 32vw;
+              height: 9.5vw;
+              border-radius: 2vw;
+              gap: 1.5vw;
+
+              .sect5_card_btn_text {
+                font-size: 3.2vw;
+              }
+
+              .sect5_card_btn_arrow {
+                width: 2.5vw;
+                height: 2.5vw;
+              }
+            }
+          }
+
+          .sect5_card_right {
+            width: 28%;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+
+            .sect5_card_ill {
+              width: 18vw;
+              height: 18vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}

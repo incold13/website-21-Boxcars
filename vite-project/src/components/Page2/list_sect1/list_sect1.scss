@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  background: transparent;
+}
+
+.list_sect1 {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #050B20;
+  font-family: "DM Sans", sans-serif;
+
+  .list_sect1_all {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .list_sect1_form {
+      width: auto;
+      min-width: 66vw;
+      height: 4.4vw;
+      background-color: #ffffff;
+      border-radius: 3vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8vw;
+      box-shadow: 0 0.6vw 2vw rgba(0, 0, 0, 0.15);
+
+      .list_sect1_spacer_left {
+        width: 1.8vw;
+        height: 100%;
+        flex-shrink: 0;
+      }
+
+      .list_sect1_spacer_right {
+        width: 0.5vw;
+        height: 100%;
+        flex-shrink: 0;
+      }
+
+      .list_sect1_field_wrap {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        .list_sect1_field_btn {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          gap: 0.7vw;
+          cursor: pointer;
+          white-space: nowrap;
+
+          .list_sect1_field_text {
+            font-size: 0.9vw;
+            font-weight: 500;
+            color: #050B20;
+            white-space: nowrap;
+          }
+
+          .list_sect1_arrow {
+            width: 0.55vw;
+            height: 0.35vw;
+            object-fit: contain;
+          }
+
+          &.list_sect1_field_btn_price {
+            gap: 0.4vw;
+          }
+
+          .list_sect1_price_label {
+            font-size: 0.9vw;
+            font-weight: 600;
+            color: #050B20;
+            white-space: nowrap;
+          }
+
+          .list_sect1_price_value {
+            font-size: 0.9vw;
+            font-weight: 400;
+            color: rgba(5, 11, 32, 0.7);
+            white-space: nowrap;
+          }
+        }
+
+        &.list_sect1_field_wrap_price {
+          min-width: 11vw;
+          width: auto;
+          flex-shrink: 0;
+        }
+
+        .list_sect1_dropdown {
+          position: absolute;
+          top: 4.8vw;
+          left: 0;
+          width: 13.5vw;
+          background: #ffffff;
+          border: 0.07vw solid #E9E9E9;
+          border-radius: 0.8vw;
+          box-shadow: 0 0.8vw 2vw rgba(0, 0, 0, 0.12);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.25vw;
+          z-index: 50;
+
+          &::before,
+          &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 0.6vw;
+            flex-shrink: 0;
+          }
+
+          &.list_sect1_dropdown_price {
+            width: 15.5vw;
+          }
+
+          .list_sect1_dropdown_item {
+            width: 88%;
+            height: 2.2vw;
+            font-size: 0.85vw;
+            font-weight: 500;
+            color: #050B20;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            border-radius: 0.4vw;
+            white-space: nowrap;
+            transition: background 0.15s ease, color 0.15s ease;
+
+            &::before {
+              content: "";
+              display: block;
+              width: 0.8vw;
+              flex-shrink: 0;
+            }
+
+            &:hover {
+              background: #F8FBFC;
+              color: #405FF2;
+            }
+          }
+        }
+      }
+
+      .list_sect1_divider {
+        width: 0.07vw;
+        height: 2vw;
+        background-color: #E9E9E9;
+        flex-shrink: 0;
+      }
+
+      .list_sect1_filter_btn {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5vw;
+        flex-shrink: 0;
+        cursor: pointer;
+        white-space: nowrap;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          width: 0.4vw;
+          flex-shrink: 0;
+        }
+
+        .list_sect1_filter_icon {
+          width: 1vw;
+          height: 0.75vw;
+          object-fit: contain;
+        }
+
+        .list_sect1_filter_text {
+          font-size: 0.9vw;
+          font-weight: 500;
+          color: #050B20;
+          white-space: nowrap;
+        }
+      }
+
+      .list_sect1_submit_btn {
+        height: 3.4vw;
+        background-color: #405FF2;
+        border-radius: 2.5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6vw;
+        flex-shrink: 0;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: background-color 0.2s ease, transform 0.15s ease;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          width: 1.4vw;
+          flex-shrink: 0;
+        }
+
+        &:hover {
+          background-color: #2b48d6;
+          transform: translateY(-0.1vw);
+        }
+
+        .list_sect1_search_icon {
+          width: 0.8vw;
+          height: 0.8vw;
+          object-fit: contain;
+        }
+
+        .list_sect1_submit_text {
+          font-size: 0.9vw;
+          font-weight: 600;
+          color: #ffffff;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .list_sect1 {
+    &::before,
+    &::after {
+      height: 4vw;
+    }
+
+    .list_sect1_all {
+      .list_sect1_form {
+        width: 88vw;
+        min-width: 0;
+        height: 6vw;
+        border-radius: 3.5vw;
+        gap: 0.5vw;
+
+        .list_sect1_spacer_left {
+          width: 2vw;
+        }
+
+        .list_sect1_spacer_right {
+          width: 0.6vw;
+        }
+
+        .list_sect1_field_wrap {
+          .list_sect1_field_btn {
+            gap: 0.6vw;
+
+            .list_sect1_field_text,
+            .list_sect1_price_label,
+            .list_sect1_price_value {
+              font-size: 1.2vw;
+            }
+
+            .list_sect1_arrow {
+              width: 0.8vw;
+              height: 0.5vw;
+            }
+          }
+
+          .list_sect1_dropdown {
+            top: 6.5vw;
+            width: 16vw;
+
+            &.list_sect1_dropdown_price {
+              width: 18vw;
+            }
+
+            .list_sect1_dropdown_item {
+              height: 3vw;
+              font-size: 1.2vw;
+
+              &::before {
+                width: 1vw;
+              }
+            }
+          }
+        }
+
+        .list_sect1_divider {
+          height: 3vw;
+        }
+
+        .list_sect1_filter_btn {
+          .list_sect1_filter_icon {
+            width: 1.4vw;
+            height: 1vw;
+          }
+
+          .list_sect1_filter_text {
+            font-size: 1.2vw;
+          }
+        }
+
+        .list_sect1_submit_btn {
+          height: 4.8vw;
+          border-radius: 3vw;
+
+          &::before,
+          &::after {
+            width: 1.6vw;
+          }
+
+          .list_sect1_search_icon {
+            width: 1.2vw;
+            height: 1.2vw;
+          }
+
+          .list_sect1_submit_text {
+            font-size: 1.2vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .list_sect1 {
+    &::before,
+    &::after {
+      height: 6vw;
+    }
+
+    .list_sect1_all {
+      .list_sect1_form {
+        width: 90vw;
+        min-width: 0;
+        height: auto;
+        flex-direction: column;
+        border-radius: 3.5vw;
+        gap: 3vw;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 3vw;
+          flex-shrink: 0;
+        }
+
+        .list_sect1_spacer_left,
+        .list_sect1_spacer_right {
+          display: none;
+        }
+
+        .list_sect1_field_wrap {
+          width: 90%;
+          height: 10vw;
+
+          .list_sect1_field_btn {
+            width: 100%;
+            justify-content: space-between;
+
+            .list_sect1_field_text,
+            .list_sect1_price_label,
+            .list_sect1_price_value {
+              font-size: 3.4vw;
+            }
+
+            .list_sect1_arrow {
+              width: 2vw;
+              height: 1.2vw;
+            }
+          }
+
+          .list_sect1_dropdown {
+            top: 11vw;
+            width: 80vw;
+            left: 50%;
+            transform: translateX(-50%);
+
+            &.list_sect1_dropdown_price {
+              width: 80vw;
+            }
+
+            .list_sect1_dropdown_item {
+              height: 7vw;
+              font-size: 3vw;
+
+              &::before {
+                width: 2.5vw;
+              }
+            }
+          }
+        }
+
+        .list_sect1_divider {
+          width: 90%;
+          height: 0.1vw;
+        }
+
+        .list_sect1_filter_btn {
+          width: 90%;
+          height: 10vw;
+          gap: 2vw;
+
+          .list_sect1_filter_icon {
+            width: 3.5vw;
+            height: 2.5vw;
+          }
+
+          .list_sect1_filter_text {
+            font-size: 3.4vw;
+          }
+        }
+
+        .list_sect1_submit_btn {
+          width: 90%;
+          height: 11vw;
+          border-radius: 2.5vw;
+          gap: 1.5vw;
+
+          &::before,
+          &::after {
+            display: none;
+          }
+
+          .list_sect1_search_icon {
+            width: 3vw;
+            height: 3vw;
+          }
+
+          .list_sect1_submit_text {
+            font-size: 3.4vw;
+          }
+        }
+      }
+    }
+  }
+}

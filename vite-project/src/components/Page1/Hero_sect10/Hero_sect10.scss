@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  background: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sect10 {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "DM Sans", sans-serif;
+  background-color: #F9FBFC;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5vw;
+    flex-shrink: 0;
+  }
+
+  .sect10_all {
+    width: 90vw;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .sect10_img_box {
+      width: 41vw;
+      height: 100%;
+      border-radius: 1.2vw;
+      overflow: hidden;
+      display: flex;
+
+      .sect10_img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .sect10_content {
+      width: 45vw;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.8vw;
+
+      .sect10_title {
+        font-size: 2.8vw;
+        font-weight: 700;
+        color: #050B20;
+        line-height: 1.25;
+      }
+
+      .sect10_address {
+        font-size: 0.95vw;
+        font-weight: 400;
+        color: #050B20;
+        line-height: 1.6;
+      }
+
+      .sect10_contacts {
+        display: flex;
+        align-items: center;
+        gap: 1.2vw;
+
+        .sect10_pill {
+          height: 3vw;
+          border-radius: 2vw;
+          border: 0.08vw solid #050B20;
+          background-color: #ffffff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.7vw;
+          cursor: pointer;
+          transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+
+          &:hover {
+            border-color: #405FF2;
+            transform: translateY(-0.15vw);
+            box-shadow: 0 0.5vw 1.2vw rgba(0, 0, 0, 0.06);
+
+            .sect10_pill_text {
+              color: #405FF2;
+            }
+          }
+
+          &:first-child {
+            width: 14vw;
+          }
+
+          &:last-child {
+            width: 15.5vw;
+          }
+
+          .sect10_pill_icon {
+            width: 1.1vw;
+            height: 1.2vw;
+            object-fit: contain;
+          }
+
+          .sect10_pill_text {
+            font-size: 0.9vw;
+            font-weight: 500;
+            color: #050B20;
+            transition: color 0.2s ease;
+          }
+        }
+      }
+
+      .sect10_btn {
+        width: 11.5vw;
+        height: 3.4vw;
+        border-radius: 0.8vw;
+        background-color: #050B20;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6vw;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.15s ease;
+
+        &:hover {
+          background-color: #405FF2;
+          transform: translateY(-0.15vw);
+        }
+
+        .sect10_btn_text {
+          font-size: 0.95vw;
+          font-weight: 600;
+          color: #ffffff;
+        }
+
+        .sect10_btn_arrow {
+          width: 0.8vw;
+          height: 0.8vw;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .sect10 {
+    height: auto;
+
+    &::before,
+    &::after {
+      height: 6vw;
+    }
+
+    .sect10_all {
+      height: auto;
+      gap: 4vw;
+
+      .sect10_img_box {
+        width: 43vw;
+        height: 40vw;
+        border-radius: 1.5vw;
+      }
+
+      .sect10_content {
+        width: 44vw;
+        height: auto;
+        gap: 2vw;
+
+        .sect10_title {
+          font-size: 3.4vw;
+        }
+
+        .sect10_address {
+          font-size: 1.4vw;
+        }
+
+        .sect10_contacts {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1.5vw;
+
+          .sect10_pill {
+            height: 4.8vw;
+            border-radius: 3vw;
+            border-width: 0.12vw;
+            gap: 1vw;
+
+            &:first-child {
+              width: 24vw;
+            }
+
+            &:last-child {
+              width: 26vw;
+            }
+
+            .sect10_pill_icon {
+              width: 1.6vw;
+              height: 1.8vw;
+            }
+
+            .sect10_pill_text {
+              font-size: 1.4vw;
+            }
+          }
+        }
+
+        .sect10_btn {
+          width: 18vw;
+          height: 5vw;
+          border-radius: 1.2vw;
+
+          .sect10_btn_text {
+            font-size: 1.4vw;
+          }
+
+          .sect10_btn_arrow {
+            width: 1.2vw;
+            height: 1.2vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sect10 {
+    height: auto;
+
+    &::before,
+    &::after {
+      height: 10vw;
+    }
+
+    .sect10_all {
+      flex-direction: column;
+      height: auto;
+      gap: 6vw;
+
+      .sect10_img_box {
+        width: 100%;
+        height: 65vw;
+        border-radius: 3vw;
+      }
+
+      .sect10_content {
+        width: 100%;
+        height: auto;
+        gap: 4vw;
+
+        .sect10_title {
+          font-size: 6.8vw;
+        }
+
+        .sect10_address {
+          font-size: 3.4vw;
+        }
+
+        .sect10_contacts {
+          flex-direction: column;
+          gap: 3vw;
+          width: 100%;
+
+          .sect10_pill {
+            height: 11vw;
+            border-radius: 5.5vw;
+            border-width: 0.2vw;
+            gap: 2vw;
+
+            &:first-child {
+              width: 100%;
+            }
+
+            &:last-child {
+              width: 100%;
+            }
+
+            .sect10_pill_icon {
+              width: 3.5vw;
+              height: 4vw;
+            }
+
+            .sect10_pill_text {
+              font-size: 3.4vw;
+            }
+          }
+        }
+
+        .sect10_btn {
+          width: 42vw;
+          height: 11vw;
+          border-radius: 2.5vw;
+          gap: 1.5vw;
+
+          .sect10_btn_text {
+            font-size: 3.4vw;
+          }
+
+          .sect10_btn_arrow {
+            width: 2.5vw;
+            height: 2.5vw;
+          }
+        }
+      }
+    }
+  }
+}

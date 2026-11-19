@@ -1,0 +1,1152 @@
+.detail_sect1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2vw;
+}
+
+.detail_sect1_breadcrumbs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.6vw;
+  font-size: 0.85vw;
+  font-family: inherit;
+
+  .detail_sect1_crumb_link {
+    color: #405ff2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .detail_sect1_crumb_sep {
+    color: #717171;
+  }
+
+  .detail_sect1_crumb_current {
+    color: #050b20;
+    font-weight: 600;
+  }
+}
+
+.detail_sect1_header_row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2vw;
+}
+
+.detail_sect1_header_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.8vw;
+
+  .detail_sect1_title {
+    color: #050b20;
+    font-size: 2.3vw;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .detail_sect1_subtitle {
+    color: #717171;
+    font-size: 0.95vw;
+    line-height: 1.4;
+  }
+}
+
+.detail_sect1_pills {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.8vw;
+  flex-wrap: wrap;
+
+  .detail_sect1_pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    background-color: #edf2fb;
+    border-radius: 2vw;
+    height: 2.4vw;
+    min-width: 6.8vw;
+
+    .detail_sect1_pill_icon {
+      width: 1vw;
+      height: 1vw;
+      object-fit: contain;
+    }
+
+    span {
+      color: #405ff2;
+      font-size: 0.9vw;
+      font-weight: 500;
+    }
+  }
+}
+
+.detail_sect1_header_actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5vw;
+
+  .detail_sect1_action_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    span {
+      color: #050b20;
+      font-size: 0.9vw;
+      font-weight: 500;
+    }
+
+    .detail_sect1_action_icon_circle {
+      width: 2.4vw;
+      height: 2.4vw;
+      border-radius: 50%;
+      border: 0.08vw solid #e9e9e9;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease;
+
+      .detail_sect1_act_img {
+        width: 1.1vw;
+        height: 1.1vw;
+        object-fit: contain;
+      }
+    }
+
+    &:hover .detail_sect1_action_icon_circle {
+      border-color: #405ff2;
+      background-color: #f7f9fe;
+    }
+
+    &.active .detail_sect1_action_icon_circle {
+      background-color: #405ff2;
+      border-color: #405ff2;
+    }
+  }
+}
+
+.detail_sect1_main_grid {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2.5vw;
+}
+
+.detail_sect1_left_col {
+  width: 67%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2.5vw;
+}
+
+.detail_sect1_gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.detail_sect1_gallery_main {
+  width: 100%;
+  height: 34vw;
+  border-radius: 1.2vw;
+  overflow: hidden;
+  position: relative;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .detail_sect1_main_photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .detail_sect1_badge_wrap {
+    position: absolute;
+    top: 1.2vw;
+    left: 1.2vw;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+
+    .detail_sect1_badge {
+      height: 2vw;
+      min-width: 3.5vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.5vw;
+      font-size: 0.8vw;
+      font-weight: 600;
+      color: #ffffff;
+      background-color: #405ff2;
+    }
+  }
+
+  .detail_sect1_video_btn {
+    position: absolute;
+    bottom: 1.2vw;
+    left: 1.2vw;
+    height: 2.2vw;
+    min-width: 5.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4vw;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 2vw;
+    color: #050b20;
+    font-size: 0.85vw;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0.4vw 1vw rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease;
+
+    .detail_sect1_video_icon {
+      width: 1.1vw;
+      height: 1.1vw;
+      object-fit: contain;
+    }
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  .detail_sect1_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.6vw;
+    height: 2.6vw;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    .detail_sect1_nav_icon {
+      width: 0.9vw;
+      height: 0.9vw;
+      object-fit: contain;
+    }
+
+    &:hover {
+      background-color: #ffffff;
+      box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.15);
+    }
+
+    &.detail_sect1_arrow_prev {
+      left: 1.2vw;
+    }
+
+    &.detail_sect1_arrow_next {
+      right: 1.2vw;
+    }
+  }
+}
+
+.detail_sect1_divider {
+  width: 100%;
+  height: 0.08vw;
+  background-color: #e9e9e9;
+}
+
+.detail_sect1_block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.5vw;
+
+  .detail_sect1_block_title {
+    color: #050b20;
+    font-size: 1.5vw;
+    font-weight: 700;
+  }
+}
+
+.detail_sect1_overview_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5vw;
+  row-gap: 0;
+
+  .detail_sect1_overview_col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8vw;
+    width: 100%;
+
+    .detail_sect1_overview_row {
+      width: 100%;
+      height: 2.2vw;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .detail_sect1_overview_left {
+        width: 11.5vw;
+        min-width: 11.5vw;
+        display: flex;
+        align-items: center;
+        gap: 0.8vw;
+
+        .detail_sect1_ov_icon {
+          width: 1.3vw;
+          height: 1.3vw;
+          object-fit: contain;
+          flex-shrink: 0;
+        }
+
+        .detail_sect1_ov_label {
+          color: #050b20;
+          font-size: 0.95vw;
+          font-weight: 400;
+          white-space: nowrap;
+        }
+      }
+
+      .detail_sect1_ov_value {
+        color: #050b20;
+        font-size: 0.95vw;
+        font-weight: 500;
+        text-align: left;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.detail_sect1_desc_text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1vw;
+
+  p {
+    color: #050B20;
+    font-size: 0.95vw;
+    line-height: 27.8px;
+  }
+}
+
+.detail_sect1_brochure_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .detail_sect1_brochure_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6vw;
+    background-color: #f7f9fe;
+    border: 0.08vw solid #405ff2;
+    border-radius: 2vw;
+    height: 2.8vw;
+    min-width: 13vw;
+    text-decoration: none;
+    color: #405ff2;
+    font-size: 0.9vw;
+    font-weight: 600;
+    transition: all 0.2s ease;
+
+    .detail_sect1_pdf_icon {
+      width: 1.2vw;
+      height: 1.2vw;
+      object-fit: contain;
+    }
+
+    &:hover {
+      background-color: #405ff2;
+      color: #ffffff;
+    }
+  }
+}
+
+.detail_sect1_features_grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5vw;
+
+  .detail_sect1_feat_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1vw;
+
+    .detail_sect1_feat_cat {
+      color: #050b20;
+      font-size: 1.05vw;
+      font-weight: 500;
+    }
+
+    .detail_sect1_feat_list {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 1.15vw;
+
+      .detail_sect1_feat_item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.5vw;
+        font-size: 0.85vw;
+        color: #050b20;
+
+        .detail_sect1_check {
+          width: 0.9vw;
+          height: 0.9vw;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+.detail_sect1_specs_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5vw;
+  row-gap: 0;
+
+  .detail_sect1_specs_col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8vw;
+    width: 100%;
+
+    .detail_sect1_spec_row {
+      width: 100%;
+      height: 2.2vw;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2vw;
+
+      .detail_sect1_spec_label {
+        color: #050b20;
+        font-size: 0.95vw;
+        font-weight: 400;
+        white-space: nowrap;
+      }
+
+      .detail_sect1_spec_value {
+        color: #050b20;
+        font-size: 0.95vw;
+        font-weight: 500;
+        text-align: left;
+        white-space: nowrap;
+      }
+    }
+
+    &.detail_sect1_dim_col1 {
+      .detail_sect1_spec_label {
+        width: 18vw;
+        min-width: 18vw;
+      }
+    }
+
+    &.detail_sect1_dim_col2 {
+      .detail_sect1_spec_label {
+        width: 13.5vw;
+        min-width: 13.5vw;
+      }
+    }
+
+    &.detail_sect1_engine_col1 {
+      .detail_sect1_spec_label {
+        width: 18vw;
+        min-width: 18vw;
+      }
+    }
+
+    &.detail_sect1_engine_col2 {
+      .detail_sect1_spec_label {
+        width: 18vw;
+        min-width: 18vw;
+      }
+    }
+  }
+}
+
+.detail_sect1_sidebar {
+  width: 30.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2vw;
+  position: sticky;
+  top: 2vw;
+}
+
+.detail_sect1_price_card {
+  width: 100%;
+  background-color: #ffffff;
+  border: 0.08vw solid #e9e9e9;
+  border-radius: 1.2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 18vw;
+  gap: 1vw;
+
+  .detail_sect1_price_label {
+    width: 88%;
+    color: #050b20;
+    font-size: 1vw;
+    font-weight: 500;
+  }
+
+  .detail_sect1_price_numbers {
+    width: 88%;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 0.8vw;
+
+    .detail_sect1_old_price {
+      color: #050B20;
+      font-size: 1vw;
+      text-decoration: line-through;
+    }
+
+    .detail_sect1_current_price {
+      color: #050b20;
+      font-size: 2.1vw;
+      font-weight: 600;
+      line-height: 1;
+    }
+  }
+
+  .detail_sect1_saving_text {
+    width: 88%;
+    color: #050B20;
+    font-size: 0.95vw;
+    font-weight: 400;
+  }
+
+  .detail_sect1_price_cta {
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.7vw;
+
+    .detail_sect1_cta_btn {
+      width: 100%;
+      height: 2.8vw;
+      border-radius: 0.6vw;
+      font-size: 0.9vw;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.6vw;
+      transition: all 0.2s ease;
+
+      .detail_sect1_cta_icon {
+        width: 1.1vw;
+        height: 1.1vw;
+        object-fit: contain;
+      }
+
+      &.detail_sect1_cta_primary {
+        background-color: #405ff2;
+        border: none;
+        color: #ffffff;
+
+        &:hover {
+          background-color: #2b4be0;
+        }
+      }
+
+      &.detail_sect1_cta_outline {
+        background-color: #ffffff;
+        border: 0.08vw solid #050b20;
+        color: #050b20;
+
+        &:hover {
+          border-color: #405ff2;
+          color: #405ff2;
+        }
+      }
+    }
+  }
+}
+
+.detail_sect1_dealer_card {
+  width: 100%;
+  background-color: #ffffff;
+  border: 0.08vw solid #e9e9e9;
+  border-radius: 1.2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 52vh;
+  gap: 0.8vw;
+
+  .detail_sect1_dealer_avatar_box {
+    width: 5.5vw;
+    height: 5.5vw;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+
+    .detail_sect1_dealer_photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .detail_sect1_dealer_name {
+    width: 88%;
+    text-align: center;
+    color: #050b20;
+    font-size: 1.25vw;
+    font-weight: 500;
+    display: flex;
+  }
+
+  .detail_sect1_dealer_address {
+    width: 88%;
+    text-align: center;
+    color: #050B20;
+    font-size: 0.89vw;
+    display: flex;
+  }
+
+  .detail_sect1_dealer_quick_row {
+    width: 92%;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    flex-wrap: nowrap;
+
+    .detail_sect1_dealer_quick_item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4vw;
+      text-decoration: none;
+      color: #050b20;
+      font-size: 0.8vw;
+      font-weight: 500;
+      white-space: nowrap;
+
+      .detail_sect1_quick_circle {
+        width: 2.2vw;
+        height: 2.2vw;
+        border-radius: 50%;
+        background-color: #eef2fb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .detail_sect1_quick_ico {
+          width: 1vw;
+          height: 1vw;
+          object-fit: contain;
+        }
+      }
+
+      &:hover span {
+        color: #405ff2;
+      }
+    }
+  }
+
+  .detail_sect1_dealer_buttons {
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8vw;
+
+    .detail_sect1_dealer_msg_btn {
+      width: 100%;
+      height: 3vw;
+      background-color: #eef2fb;
+      border: 0.08vw solid #405ff2;
+      border-radius: 0.8vw;
+      color: #405ff2;
+      font-size: 0.9vw;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5vw;
+      transition: all 0.2s ease;
+
+      .detail_sect1_btn_diag {
+        width: 0.8vw;
+        height: 0.8vw;
+        object-fit: contain;
+      }
+
+      &:hover {
+        background-color: #405ff2;
+        color: #ffffff;
+      }
+    }
+
+    .detail_sect1_dealer_wa_btn {
+      width: 100%;
+      height: 3vw;
+      background-color: #f3fbf5;
+      border: 0.08vw solid #34a853;
+      border-radius: 0.8vw;
+      color: #34a853;
+      font-size: 0.9vw;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5vw;
+      text-decoration: none;
+      transition: all 0.2s ease;
+
+      .detail_sect1_btn_diag {
+        width: 0.8vw;
+        height: 0.8vw;
+        object-fit: contain;
+      }
+
+      &:hover {
+        background-color: #34a853;
+        color: #ffffff;
+      }
+    }
+
+    .detail_sect1_dealer_stock_link {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4vw;
+      text-decoration: none;
+      color: #050b20;
+      font-size: 0.85vw;
+      font-weight: 500;
+      transition: color 0.2s ease;
+
+      .detail_sect1_link_diag {
+        width: 0.75vw;
+        height: 0.75vw;
+        object-fit: contain;
+      }
+
+      &:hover {
+        color: #405ff2;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.detail_sect1_modal_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(5, 11, 32, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.detail_sect1_modal_box {
+  width: 60vw;
+  background-color: #000000;
+  border-radius: 1vw;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .detail_sect1_modal_x {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: #ffffff;
+    font-size: 1vw;
+    cursor: pointer;
+    z-index: 10;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .detail_sect1_video_player {
+    width: 100%;
+    height: 35vw;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .detail_sect1_header_row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5vw;
+  }
+
+  .detail_sect1_header_left .detail_sect1_title {
+    font-size: 3vw;
+  }
+
+  .detail_sect1_header_left .detail_sect1_subtitle {
+    font-size: 1.4vw;
+  }
+
+  .detail_sect1_main_grid {
+    flex-direction: column;
+    gap: 3vw;
+  }
+
+  .detail_sect1_left_col {
+    width: 100%;
+  }
+
+  .detail_sect1_sidebar {
+    width: 100%;
+    position: static;
+  }
+
+  .detail_sect1_gallery_main {
+    height: 48vw;
+  }
+
+  .detail_sect1_features_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .detail_sect1_breadcrumbs {
+    font-size: 2vw;
+    gap: 1.5vw;
+  }
+
+  .detail_sect1_header_left .detail_sect1_title {
+    font-size: 5vw;
+  }
+
+  .detail_sect1_header_left .detail_sect1_subtitle {
+    font-size: 2.5vw;
+  }
+
+  .detail_sect1_pills .detail_sect1_pill {
+    height: 5vw;
+    min-width: 18vw;
+    border-radius: 4vw;
+
+    .detail_sect1_pill_icon {
+      width: 2.8vw;
+      height: 2.8vw;
+    }
+
+    span {
+      font-size: 2vw;
+    }
+  }
+
+  .detail_sect1_header_actions .detail_sect1_action_item {
+    span {
+      font-size: 2.2vw;
+    }
+
+    .detail_sect1_action_icon_circle {
+      width: 5.5vw;
+      height: 5.5vw;
+
+      .detail_sect1_act_img {
+        width: 2.5vw;
+        height: 2.5vw;
+      }
+    }
+  }
+
+  .detail_sect1_gallery_main {
+    height: 60vw;
+    border-radius: 3vw;
+
+    .detail_sect1_video_btn {
+      height: 5vw;
+      min-width: 14vw;
+      font-size: 2vw;
+
+      .detail_sect1_video_icon {
+        width: 2.5vw;
+        height: 2.5vw;
+      }
+    }
+
+    .detail_sect1_arrow {
+      width: 7vw;
+      height: 7vw;
+
+      .detail_sect1_nav_icon {
+        width: 2.5vw;
+        height: 2.5vw;
+      }
+    }
+  }
+
+  .detail_sect1_block .detail_sect1_block_title {
+    font-size: 4vw;
+  }
+
+  .detail_sect1_overview_container {
+    grid-template-columns: 1fr;
+    gap: 2vw;
+
+    .detail_sect1_overview_col {
+      gap: 2vw;
+
+      .detail_sect1_overview_row {
+        height: 6vw;
+        justify-content: flex-start;
+
+        .detail_sect1_overview_left {
+          width: 32vw;
+          min-width: 32vw;
+          gap: 2vw;
+
+          .detail_sect1_ov_icon {
+            width: 3.5vw;
+            height: 3.5vw;
+            flex-shrink: 0;
+          }
+
+          .detail_sect1_ov_label {
+            font-size: 2.3vw;
+            white-space: nowrap;
+          }
+        }
+
+        .detail_sect1_ov_value {
+          font-size: 2.3vw;
+          text-align: left;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .detail_sect1_desc_text p {
+    font-size: 2.5vw;
+  }
+
+  .detail_sect1_brochure_wrap .detail_sect1_brochure_btn {
+    height: 7vw;
+    min-width: 32vw;
+    border-radius: 4vw;
+    font-size: 2.4vw;
+
+    .detail_sect1_pdf_icon {
+      width: 3vw;
+      height: 3vw;
+    }
+  }
+
+  .detail_sect1_features_grid {
+    grid-template-columns: 1fr;
+    gap: 3vw;
+
+    .detail_sect1_feat_col .detail_sect1_feat_cat {
+      font-size: 3vw;
+    }
+
+    .detail_sect1_feat_col .detail_sect1_feat_list .detail_sect1_feat_item {
+      font-size: 2.3vw;
+
+      .detail_sect1_check {
+        width: 2.5vw;
+        height: 2.5vw;
+      }
+    }
+  }
+
+  .detail_sect1_specs_container {
+    grid-template-columns: 1fr;
+    gap: 2vw;
+
+    .detail_sect1_specs_col {
+      gap: 2vw;
+
+      .detail_sect1_spec_row {
+        height: 6vw;
+        justify-content: flex-start;
+
+        .detail_sect1_spec_label {
+          font-size: 2.3vw;
+          white-space: nowrap;
+        }
+
+        .detail_sect1_spec_value {
+          font-size: 2.3vw;
+          text-align: left;
+          white-space: nowrap;
+        }
+      }
+
+      &.detail_sect1_dim_col1 .detail_sect1_spec_label,
+      &.detail_sect1_dim_col2 .detail_sect1_spec_label,
+      &.detail_sect1_engine_col1 .detail_sect1_spec_label,
+      &.detail_sect1_engine_col2 .detail_sect1_spec_label {
+        width: 48vw;
+        min-width: 48vw;
+      }
+    }
+  }
+
+  .detail_sect1_price_card {
+    border-radius: 3vw;
+
+    .detail_sect1_price_label {
+      font-size: 2.2vw;
+    }
+
+    .detail_sect1_price_numbers {
+      .detail_sect1_old_price {
+        font-size: 3vw;
+      }
+
+      .detail_sect1_current_price {
+        font-size: 5.5vw;
+      }
+    }
+
+    .detail_sect1_saving_text {
+      font-size: 2.2vw;
+    }
+
+    .detail_sect1_price_cta .detail_sect1_cta_btn {
+      height: 7vw;
+      border-radius: 1.5vw;
+      font-size: 2.4vw;
+    }
+  }
+
+  .detail_sect1_dealer_card {
+    border-radius: 3vw;
+
+    .detail_sect1_dealer_avatar_box {
+      width: 14vw;
+      height: 14vw;
+    }
+
+    .detail_sect1_dealer_name {
+      font-size: 4vw;
+    }
+
+    .detail_sect1_dealer_address {
+      font-size: 2.4vw;
+    }
+
+    .detail_sect1_dealer_quick_row {
+      flex-direction: column;
+      gap: 2vw;
+
+      .detail_sect1_dealer_quick_item {
+        font-size: 2.4vw;
+
+        .detail_sect1_quick_circle {
+          width: 6vw;
+          height: 6vw;
+
+          .detail_sect1_quick_ico {
+            width: 3vw;
+            height: 3vw;
+          }
+        }
+      }
+    }
+
+    .detail_sect1_dealer_buttons {
+      .detail_sect1_dealer_msg_btn,
+      .detail_sect1_dealer_wa_btn {
+        height: 8vw;
+        font-size: 2.5vw;
+        border-radius: 2vw;
+
+        .detail_sect1_btn_diag {
+          width: 2vw;
+          height: 2vw;
+        }
+      }
+
+      .detail_sect1_dealer_stock_link {
+        font-size: 2.4vw;
+
+        .detail_sect1_link_diag {
+          width: 2vw;
+          height: 2vw;
+        }
+      }
+    }
+  }
+}

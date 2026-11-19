@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  background: transparent;
+}
+
+.sect7 {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "DM Sans", sans-serif;
+  background-color: #F8FBFC;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5vw;
+    flex-shrink: 0;
+  }
+
+  .sect7_all {
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+
+    .sect7_top {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .sect7_title {
+        font-size: 2.6vw;
+        font-weight: 700;
+        color: #050B20;
+        line-height: 1.25;
+        width: 23vw;
+      }
+
+      .sect7_nav {
+        display: flex;
+        align-items: center;
+        gap: 0.8vw;
+
+        .sect7_nav_btn {
+          width: 2.8vw;
+          height: 2.8vw;
+          border-radius: 50%;
+          border: 0.07vw solid #E9E9E9;
+          background: #ffffff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: border-color 0.2s ease, transform 0.15s ease;
+
+          &:hover {
+            border-color: #050B20;
+            transform: scale(1.05);
+          }
+
+          &:active {
+            transform: scale(0.95);
+          }
+
+          .sect7_nav_arrow {
+            width: 0.6vw;
+            height: 0.9vw;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+
+    .sect7_content {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .sect7_trust_col {
+        width: 25vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+
+        .sect7_trust_rating {
+          font-size: 1.25vw;
+          font-weight: 600;
+          color: #050B20;
+        }
+
+        .sect7_trust_stars {
+          width: 11vw;
+          height: 2.1vw;
+          object-fit: contain;
+        }
+
+        .sect7_trust_count {
+          font-size: 0.85vw;
+          font-weight: 400;
+          color: #050B20;
+        }
+
+        .sect7_trust_logo {
+          width: 6.8vw;
+          height: 1.8vw;
+          object-fit: contain;
+        }
+      }
+
+      .sect7_review_col {
+        width: 54vw;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+
+        .sect7_review_header {
+          display: flex;
+          flex-direction: column;
+          gap: 1.2vw;
+
+          .sect7_rating_verified {
+            display: flex;
+            align-items: center;
+            gap: 1vw;
+
+            .sect7_mini_stars {
+              height: 1.1vw;
+              width: 5.8vw;
+              object-fit: contain;
+            }
+
+            .sect7_verified {
+              display: flex;
+              align-items: center;
+              gap: 0.35vw;
+
+              .sect7_verified_icon {
+                width: 0.95vw;
+                height: 0.95vw;
+                object-fit: contain;
+              }
+
+              .sect7_verified_text {
+                font-size: 0.8vw;
+                font-weight: 400;
+                color: #71717A;
+              }
+            }
+          }
+
+          .sect7_author {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25vw;
+
+            .sect7_author_name {
+              font-size: 1.15vw;
+              font-weight: 700;
+              color: #050B20;
+            }
+
+            .sect7_author_role {
+              font-size: 0.85vw;
+              font-weight: 400;
+              color: rgba(5, 11, 32, 0.6);
+            }
+          }
+        }
+
+        .sect7_quote {
+          font-size: 1.55vw;
+          font-weight: 500;
+          line-height: 1.5;
+          color: #050B20;
+          min-height: 5vw;
+        }
+
+        .sect7_avatars {
+          display: flex;
+          align-items: center;
+          gap: 1.1vw;
+
+          .sect7_avatar_btn {
+            width: 3.4vw;
+            height: 3.4vw;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0.12vw solid transparent;
+            opacity: 0.45;
+            transition: opacity 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+
+            &:hover {
+              opacity: 0.85;
+              transform: scale(1.05);
+            }
+
+            &.active {
+              opacity: 1;
+              border-color: #405FF2;
+              transform: scale(1.05);
+            }
+
+            .sect7_avatar_img {
+              width: 2.8vw;
+              height: 2.8vw;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .sect7 {
+    height: auto;
+
+    &::before,
+    &::after {
+      height: 6vw;
+    }
+
+    .sect7_all {
+      height: auto;
+      gap: 4vw;
+
+      .sect7_top {
+        .sect7_title {
+          font-size: 3.6vw;
+          width: 40vw;
+        }
+
+        .sect7_nav {
+          gap: 1.5vw;
+
+          .sect7_nav_btn {
+            width: 5vw;
+            height: 5vw;
+            border-width: 0.12vw;
+
+            .sect7_nav_arrow {
+              width: 1.2vw;
+              height: 1.6vw;
+            }
+          }
+        }
+      }
+
+      .sect7_content {
+        .sect7_trust_col {
+          width: 30vw;
+          gap: 1.5vw;
+
+          .sect7_trust_rating {
+            font-size: 1.8vw;
+          }
+
+          .sect7_trust_stars {
+            width: 16vw;
+            height: 3vw;
+          }
+
+          .sect7_trust_count {
+            font-size: 1.3vw;
+          }
+
+          .sect7_trust_logo {
+            width: 10vw;
+            height: 2.6vw;
+          }
+        }
+
+        .sect7_review_col {
+          width: 55vw;
+          gap: 2.5vw;
+
+          .sect7_review_header {
+            gap: 1.5vw;
+
+            .sect7_rating_verified {
+              gap: 1.5vw;
+
+              .sect7_mini_stars {
+                width: 8vw;
+                height: 1.6vw;
+              }
+
+              .sect7_verified {
+                gap: 0.6vw;
+
+                .sect7_verified_icon {
+                  width: 1.4vw;
+                  height: 1.4vw;
+                }
+
+                .sect7_verified_text {
+                  font-size: 1.2vw;
+                }
+              }
+            }
+
+            .sect7_author {
+              gap: 0.4vw;
+
+              .sect7_author_name {
+                font-size: 1.7vw;
+              }
+
+              .sect7_author_role {
+                font-size: 1.3vw;
+              }
+            }
+          }
+
+          .sect7_quote {
+            font-size: 2.2vw;
+            min-height: 6vw;
+          }
+
+          .sect7_avatars {
+            gap: 1.8vw;
+
+            .sect7_avatar_btn {
+              width: 5.5vw;
+              height: 5.5vw;
+              border-width: 0.2vw;
+
+              .sect7_avatar_img {
+                width: 4.5vw;
+                height: 4.5vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sect7 {
+    height: auto;
+
+    &::before,
+    &::after {
+      height: 10vw;
+    }
+
+    .sect7_all {
+      height: auto;
+      gap: 6vw;
+
+      .sect7_top {
+        .sect7_title {
+          font-size: 6.8vw;
+          width: 65vw;
+        }
+
+        .sect7_nav {
+          gap: 2.5vw;
+
+          .sect7_nav_btn {
+            width: 10vw;
+            height: 10vw;
+            border-width: 0.25vw;
+
+            .sect7_nav_arrow {
+              width: 2.2vw;
+              height: 3.2vw;
+            }
+          }
+        }
+      }
+
+      .sect7_content {
+        flex-direction: column;
+        gap: 6vw;
+
+        .sect7_trust_col {
+          width: 100%;
+          gap: 2vw;
+
+          .sect7_trust_rating {
+            font-size: 4vw;
+          }
+
+          .sect7_trust_stars {
+            width: 32vw;
+            height: 6vw;
+          }
+
+          .sect7_trust_count {
+            font-size: 3.2vw;
+          }
+
+          .sect7_trust_logo {
+            width: 22vw;
+            height: 5.5vw;
+          }
+        }
+
+        .sect7_review_col {
+          width: 100%;
+          gap: 4vw;
+
+          .sect7_review_header {
+            gap: 2.5vw;
+
+            .sect7_rating_verified {
+              gap: 2.5vw;
+
+              .sect7_mini_stars {
+                width: 20vw;
+                height: 4vw;
+              }
+
+              .sect7_verified {
+                gap: 1vw;
+
+                .sect7_verified_icon {
+                  width: 3.5vw;
+                  height: 3.5vw;
+                }
+
+                .sect7_verified_text {
+                  font-size: 3vw;
+                }
+              }
+            }
+
+            .sect7_author {
+              gap: 0.8vw;
+
+              .sect7_author_name {
+                font-size: 4.2vw;
+              }
+
+              .sect7_author_role {
+                font-size: 3.2vw;
+              }
+            }
+          }
+
+          .sect7_quote {
+            font-size: 4.5vw;
+            min-height: auto;
+            line-height: 1.45;
+          }
+
+          .sect7_avatars {
+            gap: 2.5vw;
+
+            .sect7_avatar_btn {
+              width: 12vw;
+              height: 12vw;
+              border-width: 0.4vw;
+
+              .sect7_avatar_img {
+                width: 10vw;
+                height: 10vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

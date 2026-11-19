@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  background: transparent;
+}
+
+.sect9 {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "DM Sans", sans-serif;
+  background-color: #ffffff;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4vw;
+    flex-shrink: 0;
+  }
+
+  .sect9_all {
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+
+    .sect9_header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .sect9_title {
+        font-size: 2.6vw;
+        font-weight: 700;
+        color: #050B20;
+      }
+
+      .sect9_show_all_btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5vw;
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: translateX(0.2vw);
+
+          .sect9_show_all_text {
+            color: #405FF2;
+          }
+        }
+
+        .sect9_show_all_text {
+          font-size: 0.95vw;
+          font-weight: 500;
+          color: #050B20;
+          transition: color 0.2s ease;
+        }
+
+        .sect9_show_all_arrow {
+          width: 0.75vw;
+          height: 0.75vw;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .sect9_cards {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .sect9_card {
+        width: 13.8vw;
+        height: 12.2vw;
+        border-radius: 1vw;
+        border: 0.07vw solid #E9E9E9;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2vw;
+        cursor: pointer;
+        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+          border-color: #050B20;
+          transform: translateY(-0.3vw);
+          box-shadow: 0 0.8vw 1.5vw rgba(0, 0, 0, 0.05);
+
+          .sect9_card_name {
+            color: #405FF2;
+          }
+        }
+
+        .sect9_card_name {
+          font-size: 1vw;
+          font-weight: 600;
+          color: #050B20;
+          text-align: center;
+          transition: color 0.2s ease;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .sect9 {
+    height: auto;
+
+    &::before,
+    &::after {
+      height: 6vw;
+    }
+
+    .sect9_all {
+      height: auto;
+      gap: 4vw;
+
+      .sect9_header {
+        .sect9_title {
+          font-size: 3.8vw;
+        }
+
+        .sect9_show_all_btn {
+          gap: 0.8vw;
+
+          .sect9_show_all_text {
+            font-size: 1.5vw;
+          }
+
+          .sect9_show_all_arrow {
+            width: 1.3vw;
+            height: 1.3vw;
+          }
+        }
+      }
+
+      .sect9_cards {
+        flex-wrap: wrap;
+        gap: 2.5vw;
+        justify-content: center;
+
+        .sect9_card {
+          width: 27vw;
+          height: 16vw;
+          border-radius: 1.4vw;
+          gap: 1.5vw;
+
+          .sect9_card_logo {
+            width: 9vw;
+            height: 6vw;
+          }
+
+          .sect9_card_name {
+            font-size: 1.6vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sect9 {
+    height: auto;
+
+    &::before,
+    &::after {
+      height: 10vw;
+    }
+
+    .sect9_all {
+      height: auto;
+      gap: 5vw;
+
+      .sect9_header {
+        .sect9_title {
+          font-size: 6.8vw;
+        }
+
+        .sect9_show_all_btn {
+          gap: 1.5vw;
+
+          .sect9_show_all_text {
+            font-size: 3.2vw;
+          }
+
+          .sect9_show_all_arrow {
+            width: 2.6vw;
+            height: 2.6vw;
+          }
+        }
+      }
+
+      .sect9_cards {
+        flex-wrap: wrap;
+        gap: 3.5vw;
+        justify-content: space-between;
+
+        .sect9_card {
+          width: 42vw;
+          height: 26vw;
+          border-radius: 2vw;
+          border-width: 0.15vw;
+          gap: 2vw;
+
+          .sect9_card_logo {
+            width: 14vw;
+            height: 10vw;
+          }
+
+          .sect9_card_name {
+            font-size: 3.5vw;
+          }
+        }
+      }
+    }
+  }
+}

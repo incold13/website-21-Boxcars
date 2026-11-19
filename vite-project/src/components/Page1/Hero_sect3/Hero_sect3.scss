@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sect3 {
+  width: 100vw;
+  height: auto;
+  background-color: #F9FBFC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "DM Sans", sans-serif;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5vw;
+    flex-shrink: 0;
+  }
+
+  .sect3_all {
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .sect3_left {
+      width: 30vw;
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+
+      .sect3_title {
+        font-size: 2.6vw;
+        font-weight: 700;
+        color: #050B20;
+        line-height: 1.25;
+      }
+    }
+
+    .sect3_right {
+      width: 50vw;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 3.5vw;
+
+      .sect3_item {
+        width: 23vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2vw;
+
+        .sect3_item_icon_box {
+          width: 3.8vw;
+          height: 3.8vw;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          .sect3_item_icon {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .sect3_item_content {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 0.8vw;
+
+          .sect3_item_title {
+            font-size: 1.25vw;
+            font-weight: 500;
+            color: #050B20;
+            line-height: 1.3;
+          }
+
+          .sect3_item_desc {
+            font-size: 0.95vw;
+            font-weight: 400;
+            color: rgba(5, 11, 32, 0.7);
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .sect3 {
+    height: auto;
+
+    &::before,
+    &::after {
+      height: 6vw;
+    }
+
+    .sect3_all {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4vw;
+
+      .sect3_left {
+        width: 100%;
+        height: auto;
+
+        .sect3_title {
+          font-size: 4.2vw;
+        }
+      }
+
+      .sect3_right {
+        width: 100%;
+        row-gap: 4vw;
+
+        .sect3_item {
+          width: 42vw;
+          gap: 1.5vw;
+
+          .sect3_item_icon_box {
+            width: 5.5vw;
+            height: 5.5vw;
+          }
+
+          .sect3_item_content {
+            gap: 1vw;
+
+            .sect3_item_title {
+              font-size: 2.2vw;
+            }
+
+            .sect3_item_desc {
+              font-size: 1.5vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sect3 {
+    height: auto;
+
+    &::before,
+    &::after {
+      height: 10vw;
+    }
+
+    .sect3_all {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6vw;
+
+      .sect3_left {
+        width: 100%;
+        height: auto;
+
+        .sect3_title {
+          font-size: 6.8vw;
+          line-height: 1.2;
+        }
+      }
+
+      .sect3_right {
+        flex-direction: column;
+        gap: 6vw;
+
+        .sect3_item {
+          width: 100%;
+          gap: 2.5vw;
+
+          .sect3_item_icon_box {
+            width: 11vw;
+            height: 11vw;
+          }
+
+          .sect3_item_content {
+            gap: 1.5vw;
+
+            .sect3_item_title {
+              font-size: 4.4vw;
+            }
+
+            .sect3_item_desc {
+              font-size: 3.4vw;
+              line-height: 1.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
